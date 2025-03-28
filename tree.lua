@@ -5,7 +5,7 @@ local node = {
     value = nil,
 }
 
--- Creates an initial node with no parent nor child nodes, only a value
+-- CreateNode creates an initial node with no parent nor child nodes, only a value
 function CreateNode(number)
     return {
         parent = nil,
@@ -45,7 +45,7 @@ function AddNode(root_node, node)
                 relative_node = relative_node.left
             end
         else
-            error("duplicates not allowed")
+            error("duplicate values not allowed")
         end
     end
 end
@@ -95,17 +95,68 @@ end
 
 -- PreOrder does a pre order traversal on the tree
 function PreOrder(root_node)
+    -- we always basically go left
+    local values = {}
 
+    local function recursivePreOrder(node)
+        if node == nil then
+            return
+        end
+
+        table.insert(values, node.value)
+
+        recursivePreOrder(node.left)
+
+        recursivePreOrder(node.right)
+    end
+
+    recursivePreOrder(root_node)
+
+    return values
 end
 
 -- InOrder does an in order traversal on the tree
 function InOrder(root_node)
+    -- we kinda do left - value - right if that makes sense..
+    local values = {}
 
+    local function recursiveInOrder(node)
+        if node == nil then
+            return
+        end
+
+        recursiveInOrder(node.left)
+
+        table.insert(values, node.value)
+
+        recursiveInOrder(node.right)
+    end
+
+    recursiveInOrder(root_node)
+
+    return values
 end
 
 -- PostOrder does a post order traversal on the tree
 function PostOrder(root_node)
+    -- we just go right all the time here
+    local values = {}
 
+    local function recursivePostOrder(node)
+        if node == nil then
+            return
+        end
+
+        table.insert(values, node.value)
+
+        recursivePostOrder(node.right)
+
+        recursivePostOrder(node.left)
+    end
+
+    recursivePostOrder(root_node)
+
+    return values
 end
 
 return {
