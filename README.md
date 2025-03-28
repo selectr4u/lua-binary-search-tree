@@ -1,6 +1,7 @@
 # lua-binary-search-tree
-a lua implementation of a binary search tree
-made for the sole purpose of reinforcing my a-level knowledge on binary trees
+a lua implementation of a binary search tree made for the sole purpose of reinforcing my a-level knowledge on binary trees
+
+it implements adding nodes, pre order traversal, in order traversal, and post order traversal as well as getting depth of a node and a node from a value.
 
 # Examples
 
