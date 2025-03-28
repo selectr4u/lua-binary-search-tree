@@ -32,3 +32,6 @@ for _, x in ipairs(tree.InOrder(root_node)) do
 end
 
 ```
+
+### license
+this project is licensed under the MIT license, see the [LICENSE](https://github.com/selectr4u/lua-binary-search-tree/blob/main/LICENSE) file for more details.
