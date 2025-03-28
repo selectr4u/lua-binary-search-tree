@@ -1,10 +1,3 @@
-local node = {
-    parent = nil,
-    left = nil,
-    right = nil,
-    value = nil,
-}
-
 -- CreateNode creates an initial node with no parent nor child nodes, only a value
 function CreateNode(number)
     return {
