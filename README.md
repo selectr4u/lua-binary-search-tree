@@ -2,7 +2,7 @@
 a lua implementation of a binary search tree
 made for the sole purpose of reinforcing my a-level knowledge on binary trees
 
-# examples
+# Examples
 
 ```lua
 local tree = require("tree")
@@ -33,5 +33,5 @@ end
 
 ```
 
-### license
+### License
 this project is licensed under the MIT license, see the [LICENSE](https://github.com/selectr4u/lua-binary-search-tree/blob/main/LICENSE) file for more details.
